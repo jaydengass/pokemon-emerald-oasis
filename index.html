@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pokemon Emerald</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body, html {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                width: 100%;
+                background-color: black;
+                overflow: hidden;
+            }
+            /* This makes the game container fill the browser window */
+            #game {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- The emulator screen -->
+        <div id="game"></div>
+
+        <script>
+            // Your configuration
+            window.EJS_player = '#game';
+            window.EJS_core = 'gba';
+            window.EJS_biosUrl = 'data/gba_bios.bin'; 
+            window.EJS_gameUrl = 'games/Pokemon_Emerald.gba'; 
+            window.EJS_pathtodata = 'data/'; 
+            
+            // Start the game automatically when loaded
+            window.EJS_startOnLoaded = true;
+        </script>
+
+        <!-- Load the EmulatorJS library -->
+        <script src="data/loader.js"></script>
+    </body>
+</html>
